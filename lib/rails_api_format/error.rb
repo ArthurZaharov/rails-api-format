@@ -5,7 +5,8 @@ module RailsApiFormat
     include ActiveModel::Model
     include ActiveModel::Serialization
 
-    attr_accessor :id, :status, :error, :validations
+    attr_accessor :error, :validations
+    attr_writer :id, :status
 
     def attributes
       {

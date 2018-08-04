@@ -1,4 +1,4 @@
-$LOAD_PATH.push File.expand_path("../lib", __FILE__)
+$LOAD_PATH.push File.expand_path("lib", __dir__)
 
 require "rails_api_format/version"
 
@@ -14,10 +14,11 @@ Gem::Specification.new do |s|
 
   s.files = Dir["lib/**/*", "Rakefile", "README.md"]
 
-  s.add_dependency "rails", "~> 4.2.3"
-  s.add_dependency "active_model_serializers", "~> 0.10.0.rc2"
-  s.add_dependency "devise", "~> 3.5.1"
-  s.add_dependency "responders", "~> 2.1.0"
+  s.add_dependency "active_model_serializers"
+  s.add_dependency "devise"
+  s.add_dependency "rails"
+  s.add_dependency "responders"
+
   s.add_development_dependency "bundler-audit"
   s.add_development_dependency "rubocop"
 end
